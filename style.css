@@ -75,9 +75,24 @@ h2 {
   color: #f0f6fc;
 }
 
+.empresa {
+  color: #3fb950;
+  display: block;
+  font-size: 0.9rem;
+}
+
 .periodo {
   color: #8b949e;
   font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stack {
+  color: #8b949e;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 0.75rem;
 }
 
 .grid {
