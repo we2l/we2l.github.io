@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+@page { size: A4; margin: 1.5cm 2cm; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9.5pt; color: #1a1a1a; line-height: 1.5; }
+a { color: #1a1a1a; text-decoration: none; }
+
+.header { text-align: center; margin-bottom: 16px; border-bottom: 1.5px solid #222; padding-bottom: 12px; }
+.header h1 { font-size: 20pt; font-weight: 700; margin-bottom: 4px; }
+.header .tagline { font-size: 10pt; color: #444; margin-bottom: 6px; }
+.header .contact { font-size: 8.5pt; color: #555; }
+.header .contact a { color: #555; }
+.header .contact span { margin: 0 6px; }
+
+h2 { font-size: 11pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #ccc; padding-bottom: 3px; margin: 14px 0 8px; }
+
+.job { margin-bottom: 10px; }
+.job-header { display: flex; justify-content: space-between; align-items: baseline; }
+.job-title { font-size: 9.5pt; font-weight: 700; }
+.job-period { font-size: 8.5pt; color: #555; }
+.job-company { font-size: 9pt; color: #444; font-style: italic; margin-bottom: 3px; }
+.job p { font-size: 9pt; color: #333; }
+
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; }
+.project { margin-bottom: 6px; }
+.project-name { font-weight: 700; font-size: 9pt; }
+.project-badge { font-size: 7.5pt; color: #666; font-weight: 500; }
+.project-desc { font-size: 8.5pt; color: #444; }
+.project-stack { font-size: 8pt; color: #666; }
+
+.skills { display: flex; flex-wrap: wrap; gap: 6px; }
+.skills span { font-size: 8.5pt; background: #f0f0f0; padding: 2px 8px; border-radius: 3px; }
+
+.certs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; }
+.cert { font-size: 9pt; }
+.cert-issuer { font-size: 8pt; color: #555; }
+
+.pub { margin-bottom: 4px; }
+.pub-title { font-size: 9pt; font-weight: 600; }
+.pub-source { font-size: 8pt; color: #555; }
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>Weslley Araujo de Sousa Leite</h1>
+<div class="tagline">Backend Developer | IA Aplicada | Python & Laravel</div>
+<div class="contact">
+Rio de Janeiro, RJ<span>|</span>
+<a href="mailto:weslleyadesousa@gmail.com">weslleyadesousa@gmail.com</a><span>|</span>
+<a href="https://www.linkedin.com/in/weslley-leite/">linkedin.com/in/weslley-leite</a><span>|</span>
+<a href="https://github.com/we2l">github.com/we2l</a><span>|</span>
+<a href="https://we2l.github.io">we2l.github.io</a>
+</div>
+</div>
+
+<h2>Sobre</h2>
+<p style="font-size:9pt; color:#333; margin-bottom:4px;">Desenvolvedor Backend com 5+ anos de experiência em PHP (Laravel) e Python. Construo plataformas de impacto nacional e integro IA em produtos reais, de Visão Computacional a pipelines generativos com LLMs. Atuo próximo a times de produto, traduzindo necessidades de negócio em soluções escaláveis com DDD, mensageria e microsserviços.</p>
+
+<h2>Experiência</h2>
+
+<div class="job">
+<div class="job-header">
+<span class="job-title">Desenvolvedor Backend | Especialista em IA Aplicada</span>
+<span class="job-period">12/2022 – Atual</span>
+</div>
+<div class="job-company">SENAI Soluções Digitais</div>
+<p><strong>Tribo de IA:</strong> Liderança técnica no desenvolvimento de 5+ produtos de IA em produção para a indústria nacional, incluindo agentes autônomos, pipelines RAG e automações com LLMs. Definição de arquitetura e mentoria de desenvolvedores. Produtos utilizados diariamente por times internos e instituições de ensino da rede SENAI.</p>
+<p style="margin-top:3px;"><strong>Tribo de Saúde:</strong> Desenvolvimento e evolução do Vacina SESI, plataforma nacional de gestão de vacinação corporativa que atende milhares de empresas e milhões de trabalhadores. Arquitetura DDD, TDD, RabbitMQ e Docker.</p>
+</div>
+
+<div class="job">
+<div class="job-header">
+<span class="job-title">Consultor de IA Senior (Freelancer)</span>
+<span class="job-period">12/2025 – 05/2026</span>
+</div>
+<div class="job-company">WebJasper</div>
+<p>Consultoria técnica senior com autonomia total na definição de arquitetura. Implementação end-to-end de microsserviços de Visão Computacional para auditoria de gôndolas no varejo. Pipeline YOLOv8 + Gemini processa 200+ auditorias/dia, 98% de precisão, redução de 70% no tempo de auditoria.</p>
+</div>
+
+<div class="job">
+<div class="job-header">
+<span class="job-title">Desenvolvedor / Consultor Júnior</span>
+<span class="job-period">12/2021 – 12/2022</span>
+</div>
+<div class="job-company">HeadMind Partners</div>
+<p>Desenvolvimento Full Stack no produto VIVO Atacado, sistema de missão crítica de telecomunicações com milhões de transações/mês. PHP, Node.js, React.js e Golang. Integrações de APIs, otimização de queries e entrega contínua em squads ágeis.</p>
+</div>
+
+<div class="job">
+<div class="job-header">
+<span class="job-title">Desenvolvedor Full Stack Freelancer</span>
+<span class="job-period">07/2021 – 12/2021</span>
+</div>
+<div class="job-company">FretaTech Soluções</div>
+<p>Desenvolvimento de funcionalidades para gestão logística com Laravel e Vue.js.</p>
+</div>
+
+<div class="job">
+<div class="job-header">
+<span class="job-title">Desenvolvedor Full Stack (Estágio)</span>
+<span class="job-period">02/2021 – 07/2021</span>
+</div>
+<div class="job-company">Bizut — Recrutamento e Seleção</div>
+<p>Digitalização de processos de RH com Laravel e React.js.</p>
+</div>
+
+<h2>Projetos</h2>
+<div class="projects-grid">
+<div class="project">
+<span class="project-name">Firmou</span> <span class="project-badge">[Público]</span>
+<div class="project-desc">SaaS de geração de contratos com IA, assinatura digital e validade jurídica.</div>
+<div class="project-stack">Laravel, Nuxt.js, Gemini, Redis, Docker</div>
+</div>
+<div class="project">
+<span class="project-name">Confirmação de Gôndola por IA</span> <span class="project-badge">[Público]</span>
+<div class="project-desc">Visão computacional para auditoria de gôndolas. 98% precisão, ~43s/auditoria.</div>
+<div class="project-stack">Python, FastAPI, YOLOv8, OpenCV, Gemini</div>
+</div>
+<div class="project">
+<span class="project-name">Laboratório Digital</span> <span class="project-badge">[Público]</span>
+<div class="project-desc">Plataforma remota de exercícios em bancadas reais com assistente de IA.</div>
+<div class="project-stack">FastAPI, Vue 3, PostgreSQL, Redis, OpenShift</div>
+</div>
+<div class="project">
+<span class="project-name">Podcast IA</span> <span class="project-badge">[Interno]</span>
+<div class="project-desc">Transforma documentos em podcasts com RAG, Gemini e TTS multi-voz.</div>
+<div class="project-stack">FastAPI, LangChain, FAISS, OpenAI TTS</div>
+</div>
+<div class="project">
+<span class="project-name">RequisIA</span> <span class="project-badge">[Interno]</span>
+<div class="project-desc">Geração automática de requisitos de software com IA (INVEST).</div>
+<div class="project-stack">Vue 3, FastAPI, LangChain, LangGraph, Gemini</div>
+</div>
+<div class="project">
+<span class="project-name">Vacina SESI</span> <span class="project-badge">[Público]</span>
+<div class="project-desc">Plataforma nacional de vacinação corporativa em larga escala.</div>
+<div class="project-stack">Laravel, Vue.js, PostgreSQL, RabbitMQ, Docker</div>
+</div>
+<div class="project">
+<span class="project-name">KiroSonar</span> <span class="project-badge">[Hackathon]</span>
+<div class="project-desc">CLI de Code Review com IA, auto-fix e regras customizáveis.</div>
+<div class="project-stack">Python, LLMs, Git</div>
+</div>
+<div class="project">
+<span class="project-name">AI Security Scanner</span> <span class="project-badge">[Hackathon]</span>
+<div class="project-desc">Auditoria de segurança com agentes de IA e RAG local.</div>
+<div class="project-stack">Python, FAISS, OpenAI, Pydantic</div>
+</div>
+</div>
+
+<h2>Habilidades</h2>
+<div class="skills">
+<span>Python</span><span>FastAPI</span><span>Laravel (PHP 8+)</span><span>LLMs (Gemini/OpenAI)</span><span>LangChain</span><span>RAG</span><span>YOLO</span><span>OpenCV</span><span>PostgreSQL</span><span>Redis</span><span>RabbitMQ</span><span>Docker</span><span>DDD</span><span>TDD</span><span>Vue.js</span><span>React.js</span><span>LangGraph</span>
+</div>
+
+<h2>Certificados</h2>
+<div class="certs-grid">
+<div class="cert">IA para Desenvolvedores <span class="cert-issuer">— SENAI/SC • 100h • 2026</span></div>
+<div class="cert">Workshop Dev Com IA Avançado <span class="cert-issuer">— Tech Leads Club • 10h • 2026</span></div>
+</div>
+
+<h2>Publicações</h2>
+<div class="pub">
+<span class="pub-title">Dominando RabbitMQ com Exemplos em Laravel e Node.js</span>
+<span class="pub-source"> — Medium</span>
+</div>
+
+<h2>Formação</h2>
+<p style="font-size:9pt;"><strong>Análise e Desenvolvimento de Sistemas</strong> — Uninter • 2019 – 2022</p>
+
+</body>
+</html>

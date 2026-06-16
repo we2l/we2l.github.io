@@ -1,159 +1,476 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weslley Araujo de Sousa Leite</title>
-  <link rel="stylesheet" href="style.css">
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weslley Leite | Backend Developer & IA Aplicada</title>
+<meta content="Desenvolvedor Backend com 5+ anos de experiência em PHP (Laravel) e Python. Especialista em IA Aplicada, Visão Computacional e LLMs." name="description"/>
+<meta content="Weslley Leite | Backend Developer & IA Aplicada" property="og:title"/>
+<meta content="Desenvolvedor Backend com 5+ anos de experiência. Especialista em IA Aplicada, Python, Laravel e LLMs." property="og:description"/>
+<meta content="https://we2l.github.io/foto.jpg" property="og:image"/>
+<meta content="https://we2l.github.io" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Arial' font-weight='bold' fill='%234edea3'>WL</text></svg>">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#4edea3",
+        "primary-container": "#10b981",
+        "outline-variant": "#3c4a42",
+        background: "#0b1326",
+        "on-surface": "#dae2fd",
+        "on-surface-variant": "#bbcabf",
+        "on-primary": "#003824",
+        "surface-container": "#171f33",
+        "surface-container-low": "#131b2e",
+        "surface-container-highest": "#2d3449",
+        "surface-container-lowest": "#060e20",
+        secondary: "#adc6ff",
+        outline: "#86948a",
+        error: "#ffb4ab"
+      },
+      spacing: {
+        "stack-md": "32px",
+        "stack-sm": "16px",
+        gutter: "24px",
+        "container-max": "1120px",
+        "stack-lg": "64px"
+      },
+      fontFamily: {
+        "label-md": ["JetBrains Mono"],
+        display: ["Inter"],
+        "headline-md": ["Inter"],
+        "body-lg": ["Inter"],
+        "body-md": ["Inter"],
+        "code-sm": ["JetBrains Mono"]
+      },
+      fontSize: {
+        "label-md": ["14px", {lineHeight: "1.4", fontWeight: "500"}],
+        "display-mobile": ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700"}],
+        "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}],
+        "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}],
+        display: ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}],
+        "code-sm": ["13px", {lineHeight: "1.5", fontWeight: "400"}],
+        "headline-lg": ["30px", {lineHeight: "1.3", fontWeight: "600"}],
+        "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}]
+      }
+    }
+  }
+}
+</script>
+<style>
+body { background-color: #0b1326; color: #dae2fd; scroll-behavior: smooth; overflow-x: hidden; }
+.reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.glass-card { background: #171f33; border: 1px solid #3c4a42; transition: border-color 0.3s ease, transform 0.3s ease; }
+.glass-card:hover { border-color: #4edea3; transform: translateY(-4px); }
+.nav-active { color: #4edea3 !important; border-bottom: 2px solid #4edea3; padding-bottom: 4px; }
+html { overflow-x: hidden; }
+</style>
 </head>
-<body>
-  <header>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#experiencia">Experiência</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#publicacoes">Publicações</a>
-      <a href="#formacao">Formação</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+<body class="font-body-md text-body-md selection:bg-primary selection:text-on-primary">
 
-  <section id="hero">
-    <img src="foto.jpg" alt="Weslley Araujo de Sousa Leite" class="avatar">
-    <h1>Weslley Araujo de Sousa Leite</h1>
-    <p class="tagline">Backend Developer | IA Aplicada | Python & Laravel</p>
-    <p class="location">Rio de Janeiro, RJ</p>
-  </section>
+<header class="fixed top-0 w-full z-50 bg-[#0b1326]/80 backdrop-blur-md border-b border-[#3c4a42]">
+<nav class="flex justify-between items-center px-4 md:px-gutter py-4 max-w-[1120px] mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">WL</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="nav-link font-label-md text-label-md text-[#bbcabf] hover:text-primary transition-all duration-200" href="#home">Home</a>
+<a class="nav-link font-label-md text-label-md text-[#bbcabf] hover:text-primary transition-all duration-200" href="#about">Sobre</a>
+<a class="nav-link font-label-md text-label-md text-[#bbcabf] hover:text-primary transition-all duration-200" href="#experience">Experiência</a>
+<a class="nav-link font-label-md text-label-md text-[#bbcabf] hover:text-primary transition-all duration-200" href="#projects">Projetos</a>
+<a class="nav-link font-label-md text-label-md text-[#bbcabf] hover:text-primary transition-all duration-200" href="#skills">Habilidades</a>
+<a class="nav-link font-label-md text-label-md text-[#bbcabf] hover:text-primary transition-all duration-200" href="#contact">Contato</a>
+<a href="cv.pdf" target="_blank" class="bg-primary text-[#003824] px-6 py-2 rounded-lg font-label-md hover:bg-[#10b981] transition-colors active:opacity-80">Currículo</a>
+</div>
+<button class="md:hidden text-primary" id="menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<div class="hidden md:hidden flex-col gap-4 px-4 pb-4" id="mobile-menu">
+<a class="nav-link text-[#bbcabf] hover:text-primary" href="#home">Home</a>
+<a class="nav-link text-[#bbcabf] hover:text-primary" href="#about">Sobre</a>
+<a class="nav-link text-[#bbcabf] hover:text-primary" href="#experience">Experiência</a>
+<a class="nav-link text-[#bbcabf] hover:text-primary" href="#projects">Projetos</a>
+<a class="nav-link text-[#bbcabf] hover:text-primary" href="#skills">Habilidades</a>
+<a class="nav-link text-[#bbcabf] hover:text-primary" href="#contact">Contato</a>
+<a href="cv.pdf" target="_blank" class="bg-primary text-[#003824] px-6 py-2 rounded-lg font-label-md text-center">Currículo</a>
+</div>
+</header>
 
-  <section id="sobre">
-    <h2>Sobre</h2>
-    <p>Desenvolvedor Backend com 5+ anos de experiência em PHP (Laravel) e Python. Construo plataformas de impacto nacional, como o Vacina SESI, e integro IA em produtos reais, de Visão Computacional a pipelines generativos com LLMs. Atuo próximo a times de produto, traduzindo necessidades de negócio em soluções escaláveis com DDD, mensageria e microsserviços. Também empreendo: criei o <a href="https://firmou.app.br">Firmou</a>, SaaS de geração de contratos com IA.</p>
-  </section>
+<main class="pt-24">
 
-  <section id="experiencia">
-    <h2>Experiência</h2>
+<!-- Hero -->
+<section class="reveal min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center text-center px-4 md:px-gutter mb-16" id="home">
+<div class="relative mb-8">
+<div class="absolute -inset-1 bg-gradient-to-tr from-[#4edea3] to-[#adc6ff] rounded-full blur opacity-20"></div>
+<img alt="Weslley Araujo de Sousa Leite" class="relative w-36 h-36 md:w-48 md:h-48 rounded-full border-4 border-[#2d3449] object-cover object-[center_40%]" src="foto.jpg"/>
+</div>
+<h1 class="font-display text-display-mobile md:text-display text-[#dae2fd] mb-4">Weslley Araujo de Sousa Leite</h1>
+<p class="font-headline-md text-[18px] md:text-headline-md text-primary mb-2">Backend Developer | IA Aplicada | Python & Laravel</p>
+<div class="flex items-center gap-2 text-[#bbcabf]">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-label-md text-label-md">Rio de Janeiro, RJ</span>
+</div>
+</section>
 
-    <div class="item">
-      <h3>Desenvolvedor Backend | Especialista em IA Aplicada</h3>
-      <span class="empresa">SENAI Soluções Digitais</span>
-      <span class="periodo">12/2022 – Atual</span>
-      <p><strong>Tribo de IA:</strong> Liderança técnica no desenvolvimento de produtos de IA para times internos do SENAI e para a indústria nacional, utilizando LLMs, RAG e pipelines de automação.</p>
-      <p><strong>Tribo de Saúde:</strong> Desenvolvimento e manutenção do Vacina SESI, ecossistema nacional de gestão de vacinação corporativa com DDD, TDD, RabbitMQ e Docker.</p>
-    </div>
+<!-- Sobre -->
+<section class="reveal max-w-[1120px] mx-auto px-4 md:px-gutter mb-16" id="about">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-[Inter] text-[30px] font-semibold text-[#dae2fd] mb-6 flex items-center gap-4">
+<span class="w-12 h-[2px] bg-primary"></span>
+Sobre Mim
+</h2>
+<p class="font-body-lg text-body-lg text-[#bbcabf] leading-relaxed mb-6">
+Desenvolvedor Backend com 5+ anos de experiência em PHP (Laravel) e Python. Construo plataformas de impacto nacional, como o Vacina SESI, e integro IA em produtos reais, de Visão Computacional a pipelines generativos com LLMs.
+</p>
+<p class="font-body-lg text-body-lg text-[#bbcabf] leading-relaxed">
+Atuo próximo a times de produto, traduzindo necessidades de negócio em soluções escaláveis com DDD, mensageria e microsserviços. Também empreendo: criei o <a href="https://firmou.app.br" class="text-primary hover:underline">Firmou</a>, SaaS de geração de contratos com IA.
+</p>
+</div>
+<div class="hidden md:block bg-[#171f33] rounded-xl p-8 border border-[#3c4a42]">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-md text-primary">pipeline.py</span>
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-[#ffb4ab]/40"></div>
+<div class="w-3 h-3 rounded-full bg-primary/40"></div>
+</div>
+</div>
+<pre class="font-code-sm text-code-sm text-[#bbcabf] overflow-x-auto"><span class="text-primary">class</span> AIProcessor:
+    <span class="text-primary">def</span> __init__(self, model, pipeline):
+        self.model = model
+        self.pipeline = pipeline
 
-    <div class="item">
-      <h3>Consultor de IA Senior (Freelancer)</h3>
-      <span class="empresa">WebJasper</span>
-      <span class="periodo">12/2025 – 05/2026</span>
-      <p>Design e implementação de microsserviços de Visão Computacional para auditoria automatizada de gôndolas no varejo. O sistema analisa fotos de prateleiras e compara com o planograma esperado, alcançando 98% de precisão e reduzindo o tempo de auditoria em 70%.</p>
-    </div>
+    <span class="text-primary">async def</span> process(self, document):
+        chunks = self.pipeline.split(document)
+        embeddings = <span class="text-primary">await</span> self.model.embed(chunks)
+        <span class="text-primary">return</span> self.pipeline.generate(embeddings)</pre>
+</div>
+</div>
+</section>
 
-    <div class="item">
-      <h3>Desenvolvedor / Consultor Júnior</h3>
-      <span class="empresa">HeadMind Partners</span>
-      <span class="periodo">12/2021 – 12/2022</span>
-      <p>Atuação consultiva no produto VIVO Atacado. Desenvolvimento Full Stack com PHP, Node.js, React.js e Golang em sistemas de missão crítica.</p>
-    </div>
+<!-- Experiência -->
+<section class="reveal max-w-[1120px] mx-auto px-4 md:px-gutter mb-16" id="experience">
+<h2 class="font-[Inter] text-[30px] font-semibold text-[#dae2fd] mb-12">Experiência Profissional</h2>
+<div class="space-y-8">
 
-    <div class="item">
-      <h3>Desenvolvedor Full Stack Freelancer</h3>
-      <span class="empresa">FretaTech Soluções</span>
-      <span class="periodo">07/2021 – 12/2021</span>
-      <p>Desenvolvimento de funcionalidades para gestão logística com Laravel e Vue.js.</p>
-    </div>
+<div class="relative pl-8 border-l border-[#3c4a42]">
+<div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-2 shadow-[0_0_10px_rgba(78,222,163,0.5)]"></div>
+<div class="flex flex-col gap-1 mb-2">
+<h3 class="font-headline-md text-[18px] md:text-headline-md text-[#dae2fd]">Desenvolvedor Backend | Especialista em IA Aplicada</h3>
+<span class="font-label-md text-primary bg-primary/10 px-3 py-1 rounded">12/2022 – Atual</span>
+</div>
+<p class="font-label-md text-primary mb-2">SENAI Soluções Digitais</p>
+<p class="text-[#bbcabf] mb-2"><strong class="text-[#dae2fd]">Tribo de IA:</strong> Liderança técnica no desenvolvimento de 5+ produtos de IA em produção para a indústria nacional, incluindo agentes autônomos, pipelines RAG e automações com LLMs. Definição de arquitetura e mentoria de desenvolvedores. Produtos em produção utilizados diariamente por times internos e instituições de ensino da rede SENAI.</p>
+<p class="text-[#bbcabf]"><strong class="text-[#dae2fd]">Tribo de Saúde:</strong> Desenvolvimento e evolução do Vacina SESI, plataforma nacional de gestão de vacinação corporativa que atende milhares de empresas e milhões de trabalhadores da indústria. Arquitetura orientada a domínio (DDD), cobertura de testes com TDD, processamento assíncrono com RabbitMQ e deploy containerizado com Docker.</p>
+</div>
 
-    <div class="item">
-      <h3>Desenvolvedor Full Stack (Estágio)</h3>
-      <span class="empresa">Bizut — Recrutamento e Seleção</span>
-      <span class="periodo">02/2021 – 07/2021</span>
-      <p>Digitalização de processos de RH com Laravel e React.js.</p>
-    </div>
-  </section>
+<div class="relative pl-8 border-l border-[#3c4a42]">
+<div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-2 shadow-[0_0_10px_rgba(78,222,163,0.5)]"></div>
+<div class="flex flex-col gap-1 mb-2">
+<h3 class="font-headline-md text-headline-md text-[#dae2fd]">Consultor de IA Senior (Freelancer)</h3>
+<span class="font-label-md text-primary bg-primary/10 px-3 py-1 rounded">12/2025 – 05/2026</span>
+</div>
+<p class="font-label-md text-primary mb-2">WebJasper</p>
+<p class="text-[#bbcabf]">Consultoria técnica senior com autonomia total na definição de arquitetura. Implementação end-to-end de microsserviços de Visão Computacional para auditoria automatizada de gôndolas no varejo. Pipeline com YOLOv8 + Gemini processa 200+ auditorias/dia, alcançando 98% de precisão, reduzindo o tempo de auditoria em 70% e eliminando a necessidade de conferência manual em campo.</p>
+</div>
 
-  <section id="projetos">
-    <h2>Projetos</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Firmou</h3>
-        <p>Plataforma SaaS própria que gera contratos e propostas comerciais com IA, com assinatura digital e validade jurídica. Em produção com landing pages SEO, pagamentos integrados e geração de documentos via LLM em menos de 2 minutos.</p>
-        <span class="stack">Laravel, Nuxt.js, Gemini, Asaas, Redis, Docker</span>
-        <a href="https://firmou.app.br">firmou.app.br</a>
-      </div>
-      <div class="card">
-        <h3>Confirmação de Gôndola por IA</h3>
-        <p>Microserviço de visão computacional que audita gôndolas comparando fotos com planogramas. Pipeline: YOLOv8 custom (95% mAP) detecta regiões → Gemini 2.5 Pro identifica produtos por EAN → cross-validation corrige confusões. 98% de precisão, ~43s por auditoria.</p>
-        <span class="stack">Python, FastAPI, YOLOv8, OpenCV, Gemini, PostgreSQL, Docker</span>
-        <a href="https://webjasper.com.br/sistema-planograma/">Web Jasper</a>
-      </div>
-      <div class="card">
-        <h3>KiroSonar <span class="badge">Hackathon</span></h3>
-        <p>CLI de Code Review inteligente com IA que analisa git diffs, aplica regras da empresa e faz auto-fix no código.</p>
-        <span class="stack">Python, LLMs, Git</span>
-        <a href="https://github.com/IA-para-DEVs-SD/grupo-5-kirosonar">GitHub</a>
-      </div>
-      <div class="card">
-        <h3>AI Security Scanner <span class="badge">Hackathon</span></h3>
-        <p>CLI de auditoria de segurança com agentes de IA, RAG local e classificação de vulnerabilidades por severidade.</p>
-        <span class="stack">Python, FAISS, OpenAI, Pydantic, RAG</span>
-        <a href="https://github.com/IA-para-DEVs-SD/agentes-do-caos">GitHub</a>
-      </div>
-      <div class="card">
-        <h3>Vacina SESI</h3>
-        <p>Plataforma nacional de gestão de vacinação corporativa para a indústria brasileira, com campanhas em larga escala, processamento assíncrono e alta disponibilidade.</p>
-        <span class="stack">Laravel, Vue.js, PostgreSQL, Docker, RabbitMQ</span>
-        <a href="https://vacinasesi.com.br">Site</a>
-      </div>
-    </div>
-  </section>
+<div class="relative pl-8 border-l border-[#3c4a42]">
+<div class="absolute w-4 h-4 bg-[#86948a] rounded-full -left-[9px] top-2"></div>
+<div class="flex flex-col gap-1 mb-2">
+<h3 class="font-headline-md text-headline-md text-[#dae2fd]">Desenvolvedor / Consultor Júnior</h3>
+<span class="font-label-md text-[#bbcabf] bg-[#171f33] px-3 py-1 rounded">12/2021 – 12/2022</span>
+</div>
+<p class="font-label-md text-primary mb-2">HeadMind Partners</p>
+<p class="text-[#bbcabf]">Desenvolvimento Full Stack no produto VIVO Atacado, sistema de missão crítica de telecomunicações com milhões de transações/mês. Atuação em PHP, Node.js, React.js e Golang, com foco em integrações de APIs, otimização de queries e entrega contínua em squads ágeis.</p>
+</div>
 
-  <section id="habilidades">
-    <h2>Habilidades</h2>
-    <ul class="tags">
-      <li>Python</li>
-      <li>FastAPI</li>
-      <li>Laravel (PHP 8+)</li>
-      <li>LLMs (Gemini/OpenAI)</li>
-      <li>LangChain</li>
-      <li>RAG</li>
-      <li>YOLO</li>
-      <li>OpenCV</li>
-      <li>PostgreSQL</li>
-      <li>Redis</li>
-      <li>RabbitMQ</li>
-      <li>Docker</li>
-      <li>DDD</li>
-      <li>TDD</li>
-      <li>Vue.js</li>
-      <li>React.js</li>
-    </ul>
-  </section>
+<div class="relative pl-8 border-l border-[#3c4a42]">
+<div class="absolute w-4 h-4 bg-[#86948a] rounded-full -left-[9px] top-2"></div>
+<div class="flex flex-col gap-1 mb-2">
+<h3 class="font-headline-md text-headline-md text-[#dae2fd]">Desenvolvedor Full Stack Freelancer</h3>
+<span class="font-label-md text-[#bbcabf] bg-[#171f33] px-3 py-1 rounded">07/2021 – 12/2021</span>
+</div>
+<p class="font-label-md text-primary mb-2">FretaTech Soluções</p>
+<p class="text-[#bbcabf]">Desenvolvimento de funcionalidades para gestão logística com Laravel e Vue.js.</p>
+</div>
 
-  <section id="publicacoes">
-    <h2>Publicações</h2>
-    <div class="item">
-      <h3><a href="https://medium.com/@weslleyaraujo/come%C3%A7ando-com-rabbitmq-laravel-e-node-um-guia-simples-e-pr%C3%A1tico-d34bed5ffe98" target="_blank">Dominando RabbitMQ com Exemplos em Laravel e Node.js</a></h3>
-      <span class="empresa">Medium</span>
-      <p>Guia prático e didático sobre RabbitMQ cobrindo os 4 tipos de exchange (Direct, Fanout, Topic, Headers) com exemplos funcionais usando Laravel como producer e Node.js como consumer.</p>
-    </div>
-  </section>
+<div class="relative pl-8 border-l border-[#3c4a42]">
+<div class="absolute w-4 h-4 bg-[#86948a] rounded-full -left-[9px] top-2"></div>
+<div class="flex flex-col gap-1 mb-2">
+<h3 class="font-headline-md text-headline-md text-[#dae2fd]">Desenvolvedor Full Stack (Estágio)</h3>
+<span class="font-label-md text-[#bbcabf] bg-[#171f33] px-3 py-1 rounded">02/2021 – 07/2021</span>
+</div>
+<p class="font-label-md text-primary mb-2">Bizut — Recrutamento e Seleção</p>
+<p class="text-[#bbcabf]">Digitalização de processos de RH com Laravel e React.js.</p>
+</div>
 
-  <section id="formacao">
-    <h2>Formação</h2>
-    <div class="item">
-      <h3>Análise e Desenvolvimento de Sistemas</h3>
-      <span class="empresa">Uninter</span>
-      <span class="periodo">2019 – 2022</span>
-    </div>
-  </section>
+</div>
+</section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <ul>
-      <li><a href="https://github.com/we2l">GitHub</a></li>
-      <li><a href="mailto:weslleyadesousa@gmail.com">Email</a></li>
-      <li><a href="https://www.linkedin.com/in/weslley-leite/">LinkedIn</a></li>
-    </ul>
-  </section>
-</body>
-</html>
+<!-- Projetos -->
+<section class="reveal max-w-[1120px] mx-auto px-4 md:px-gutter mb-16" id="projects">
+<h2 class="font-[Inter] text-[30px] font-semibold text-[#dae2fd] mb-12">Projetos</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<div class="glass-card rounded-xl p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-primary/80 font-label-md">Público</span>
+<a class="text-[#bbcabf] hover:text-primary transition-colors" href="https://firmou.app.br"><span class="material-symbols-outlined">open_in_new</span></a>
+</div>
+<h4 class="font-headline-md text-headline-md text-[#dae2fd] mb-3">Firmou</h4>
+<p class="text-[#bbcabf] text-sm mb-6 flex-grow">Plataforma SaaS própria que gera contratos e propostas comerciais com IA, com assinatura digital e validade jurídica. Geração de documentos via LLM em menos de 2 minutos.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Laravel</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Nuxt.js</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Gemini</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Redis</span>
+</div>
+</div>
+
+<div class="glass-card rounded-xl p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-primary/80 font-label-md">Público</span>
+<a class="text-[#bbcabf] hover:text-primary transition-colors" href="https://webjasper.com.br/sistema-planograma/"><span class="material-symbols-outlined">open_in_new</span></a>
+</div>
+<h4 class="font-headline-md text-headline-md text-[#dae2fd] mb-3">Confirmação de Gôndola por IA</h4>
+<p class="text-[#bbcabf] text-sm mb-6 flex-grow">Microserviço de visão computacional que audita gôndolas comparando fotos com planogramas. YOLOv8 + Gemini 2.5 Pro. 98% de precisão, ~43s por auditoria.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Python</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">FastAPI</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">YOLOv8</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Gemini</span>
+</div>
+</div>
+
+<div class="glass-card rounded-xl p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-primary/80 font-label-md">Público</span>
+<a class="text-[#bbcabf] hover:text-primary transition-colors" href="https://lab-digital.sesisenai.org.br/login"><span class="material-symbols-outlined">open_in_new</span></a>
+</div>
+<h4 class="font-headline-md text-headline-md text-[#dae2fd] mb-3">Laboratório Digital</h4>
+<p class="text-[#bbcabf] text-sm mb-6 flex-grow">Plataforma web para realização remota de exercícios práticos em bancadas reais de laboratório. Assistente de IA, painel docente e integrações institucionais.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">FastAPI</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Vue 3</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">PostgreSQL</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">OpenShift</span>
+</div>
+</div>
+
+<div class="glass-card rounded-xl p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[#adc6ff] font-label-md">Interno</span>
+<span class="material-symbols-outlined text-[#86948a]">lock</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-[#dae2fd] mb-3">Podcast IA</h4>
+<p class="text-[#bbcabf] text-sm mb-6 flex-grow">Transforma documentos (PDF, DOCX) em episódios de podcast com IA. Pipeline RAG com FAISS, Gemini gera roteiros e OpenAI TTS sintetiza áudio multi-voz.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">FastAPI</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">LangChain</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">FAISS</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">OpenAI TTS</span>
+</div>
+</div>
+
+<div class="glass-card rounded-xl p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[#adc6ff] font-label-md">Interno</span>
+<span class="material-symbols-outlined text-[#86948a]">lock</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-[#dae2fd] mb-3">RequisIA</h4>
+<p class="text-[#bbcabf] text-sm mb-6 flex-grow">Automatiza criação de documentos de requisitos com IA generativa. Gera histórias de usuário, requisitos funcionais e critérios de aceite (INVEST).</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Vue 3</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">FastAPI</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">LangGraph</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Gemini</span>
+</div>
+</div>
+
+<div class="glass-card rounded-xl p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-primary/80 font-label-md">Público</span>
+<a class="text-[#bbcabf] hover:text-primary transition-colors" href="https://vacinasesi.com.br"><span class="material-symbols-outlined">open_in_new</span></a>
+</div>
+<h4 class="font-headline-md text-headline-md text-[#dae2fd] mb-3">Vacina SESI</h4>
+<p class="text-[#bbcabf] text-sm mb-6 flex-grow">Plataforma nacional de gestão de vacinação corporativa para a indústria brasileira. Campanhas em larga escala, processamento assíncrono e alta disponibilidade.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Laravel</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Vue.js</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">RabbitMQ</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Docker</span>
+</div>
+</div>
+
+<div class="glass-card rounded-xl p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[#4edea3] font-label-md">Hackathon</span>
+<a class="text-[#bbcabf] hover:text-primary transition-colors" href="https://github.com/IA-para-DEVs-SD/grupo-5-kirosonar"><span class="material-symbols-outlined">open_in_new</span></a>
+</div>
+<h4 class="font-headline-md text-headline-md text-[#dae2fd] mb-3">KiroSonar</h4>
+<p class="text-[#bbcabf] text-sm mb-6 flex-grow">CLI de Code Review inteligente com IA que analisa git diffs, aplica regras da empresa e faz auto-fix no código.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Python</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">LLMs</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Git</span>
+</div>
+</div>
+
+<div class="glass-card rounded-xl p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[#4edea3] font-label-md">Hackathon</span>
+<a class="text-[#bbcabf] hover:text-primary transition-colors" href="https://github.com/IA-para-DEVs-SD/agentes-do-caos"><span class="material-symbols-outlined">open_in_new</span></a>
+</div>
+<h4 class="font-headline-md text-headline-md text-[#dae2fd] mb-3">AI Security Scanner</h4>
+<p class="text-[#bbcabf] text-sm mb-6 flex-grow">CLI de auditoria de segurança com agentes de IA, RAG local e classificação de vulnerabilidades por severidade.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Python</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">FAISS</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">RAG</span>
+<span class="font-code-sm text-code-sm border border-[#3c4a42] px-2 py-1 rounded text-[#bbcabf]">Pydantic</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Habilidades -->
+<section class="reveal max-w-[1120px] mx-auto px-4 md:px-gutter mb-16" id="skills">
+<h2 class="font-[Inter] text-[30px] font-semibold text-[#dae2fd] mb-8 text-center">Habilidades Técnicas</h2>
+<div class="flex flex-wrap justify-center gap-3 md:gap-4">
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">Python</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">FastAPI</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">Laravel (PHP 8+)</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">LLMs (Gemini/OpenAI)</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">LangChain</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">RAG</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">YOLO</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">OpenCV</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">PostgreSQL</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">Redis</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">RabbitMQ</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">Docker</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">DDD</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">TDD</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">Vue.js</span>
+<span class="bg-[#171f33] px-4 py-2 md:px-6 md:py-3 rounded-full border border-[#3c4a42] font-label-md text-[#dae2fd] hover:border-primary transition-all">React.js</span>
+</div>
+</section>
+
+<!-- Publicações & Certificados -->
+<section class="max-w-[1120px] mx-auto px-4 md:px-gutter mb-16 grid md:grid-cols-2 gap-12">
+<div class="reveal">
+<h2 class="font-[Inter] text-[30px] font-semibold text-[#dae2fd] mb-6">Publicações</h2>
+<ul class="space-y-4">
+<li class="border-b border-[#3c4a42] pb-4 group">
+<a class="block hover:translate-x-2 transition-transform" href="https://medium.com/@weslleyaraujo/come%C3%A7ando-com-rabbitmq-laravel-e-node-um-guia-simples-e-pr%C3%A1tico-d34bed5ffe98" target="_blank">
+<span class="font-label-md text-primary mb-1 block">Medium</span>
+<span class="font-body-lg text-[#dae2fd] group-hover:text-primary transition-colors">Dominando RabbitMQ com Exemplos em Laravel e Node.js</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="reveal">
+<h2 class="font-[Inter] text-[30px] font-semibold text-[#dae2fd] mb-6">Certificados</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-[#131b2e] p-4 rounded-lg border border-[#3c4a42]">
+<span class="material-symbols-outlined text-[#adc6ff]">verified</span>
+<div>
+<p class="font-label-md text-[#dae2fd]">IA para Desenvolvedores</p>
+<p class="text-xs text-[#bbcabf]">SENAI/SC — LAB 365 • 100 horas • 2026</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-[#131b2e] p-4 rounded-lg border border-[#3c4a42]">
+<span class="material-symbols-outlined text-[#adc6ff]">verified</span>
+<div>
+<p class="font-label-md text-[#dae2fd]">Workshop Desenvolvimento Com IA Avançado</p>
+<p class="text-xs text-[#bbcabf]">Tech Leads Club • 10 horas • 2026</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Formação -->
+<section class="reveal max-w-[1120px] mx-auto px-4 md:px-gutter mb-16 text-center">
+<h2 class="font-[Inter] text-[30px] font-semibold text-[#dae2fd] mb-6">Formação</h2>
+<div class="inline-block p-6 bg-[#171f33] rounded-xl border border-[#3c4a42]">
+<p class="font-headline-md text-[#dae2fd]">Análise e Desenvolvimento de Sistemas</p>
+<p class="text-[#bbcabf]">Uninter • 2019 – 2022</p>
+</div>
+</section>
+
+<!-- Contato -->
+<section class="reveal max-w-[1120px] mx-auto px-4 md:px-gutter mb-16 text-center" id="contact">
+<h2 class="font-display text-display-mobile md:text-display text-[#dae2fd] mb-8">Vamos Conversar</h2>
+<div class="flex justify-center gap-8">
+<a class="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-[#171f33] border border-[#3c4a42] text-[#dae2fd] hover:text-primary hover:border-primary transition-all" href="https://github.com/we2l">
+<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+</a>
+<a class="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-[#171f33] border border-[#3c4a42] text-[#dae2fd] hover:text-primary hover:border-primary transition-all" href="https://www.linkedin.com/in/weslley-leite/">
+<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+</a>
+<a class="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-[#171f33] border border-[#3c4a42] text-[#dae2fd] hover:text-primary hover:border-primary transition-all" href="mailto:weslleyadesousa@gmail.com">
+<span class="material-symbols-outlined !text-3xl">mail</span>
+</a>
+</div>
+</section>
+</main>
+
+<footer class="bg-[#060e20] border-t border-[#3c4a42]">
+<div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-gutter py-8 max-w-[1120px] mx-auto gap-4">
+<div class="font-label-md font-bold text-[#dae2fd]">WL</div>
+<p class="text-[#bbcabf] text-center text-sm">© 2026 Weslley Leite. Feito com lógica e dedicação.</p>
+<div class="flex gap-6">
+<a class="text-[#bbcabf] hover:text-primary transition-colors text-sm" href="https://github.com/we2l">GitHub</a>
+<a class="text-[#bbcabf] hover:text-primary transition-colors text-sm" href="https://www.linkedin.com/in/weslley-leite/">LinkedIn</a>
+</div>
+</div>
+</footer>
+
+<script>
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('active');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Active nav
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (pageYOffset >= s.offsetTop - 150) current = s.getAttribute('id');
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('nav-active');
+    if (link.getAttribute('href').includes(current)) link.classList.add('nav-active');
+  });
+});
+
+// Mobile menu
+document.getElementById('menu-btn').addEventListener('click', () => {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+  menu.classList.toggle('flex');
+});
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.add('hidden');
+    document.getElementById('mobile-menu').classList.remove('flex');
+  });
+});
+</script>
+</body></html>
