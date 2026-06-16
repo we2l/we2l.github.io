@@ -13,19 +13,22 @@
       <a href="#experiencia">Experiência</a>
       <a href="#projetos">Projetos</a>
       <a href="#habilidades">Habilidades</a>
+      <a href="#publicacoes">Publicações</a>
       <a href="#formacao">Formação</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <section id="hero">
+    <img src="foto.jpg" alt="Weslley Araujo de Sousa Leite" class="avatar">
     <h1>Weslley Araujo de Sousa Leite</h1>
     <p class="tagline">Backend Developer | IA Aplicada | Python & Laravel</p>
+    <p class="location">Rio de Janeiro, RJ</p>
   </section>
 
   <section id="sobre">
     <h2>Sobre</h2>
-    <p>Desenvolvedor Backend especializado em Laravel (PHP) e Python, com experiência na construção de plataformas nacionais, sistemas distribuídos e pipelines assíncronos de alta escala. Expertise em arquitetura orientada a domínio (DDD), mensageria com RabbitMQ e integração de Inteligência Artificial em produtos reais, conectando serviços backend a LLMs e soluções de Visão Computacional.</p>
+    <p>Desenvolvedor Backend com 5+ anos de experiência em PHP (Laravel) e Python. Construo plataformas de impacto nacional, como o Vacina SESI, e integro IA em produtos reais, de Visão Computacional a pipelines generativos com LLMs. Atuo próximo a times de produto, traduzindo necessidades de negócio em soluções escaláveis com DDD, mensageria e microsserviços. Também empreendo: criei o <a href="https://firmou.app.br">Firmou</a>, SaaS de geração de contratos com IA.</p>
   </section>
 
   <section id="experiencia">
@@ -35,15 +38,15 @@
       <h3>Desenvolvedor Backend | Especialista em IA Aplicada</h3>
       <span class="empresa">SENAI Soluções Digitais</span>
       <span class="periodo">12/2022 – Atual</span>
-      <p><strong>Tribo de IA:</strong> Liderança técnica em soluções de automação inteligente e NLP. Desenvolvi plataforma de geração de podcasts via IA com RAG, agentes customizáveis e pipelines TTS.</p>
+      <p><strong>Tribo de IA:</strong> Liderança técnica no desenvolvimento de produtos de IA para times internos do SENAI e para a indústria nacional, utilizando LLMs, RAG e pipelines de automação.</p>
       <p><strong>Tribo de Saúde:</strong> Desenvolvimento e manutenção do Vacina SESI, ecossistema nacional de gestão de vacinação corporativa com DDD, TDD, RabbitMQ e Docker.</p>
     </div>
 
     <div class="item">
-      <h3>Desenvolvedor e Consultor de IA Senior</h3>
+      <h3>Consultor de IA Senior (Freelancer)</h3>
       <span class="empresa">WebJasper</span>
-      <span class="periodo">12/2025 – 03/2026</span>
-      <p>Arquitetura de microsserviços para soluções multimodais de Visão Computacional no setor varejista. Motores de inferência com YOLO e OpenCV, orquestração de agentes com LangChain e Gemini.</p>
+      <span class="periodo">12/2025 – 05/2026</span>
+      <p>Design e implementação de microsserviços de Visão Computacional para auditoria automatizada de gôndolas no varejo. O sistema analisa fotos de prateleiras e compara com o planograma esperado, alcançando 98% de precisão e reduzindo o tempo de auditoria em 70%.</p>
     </div>
 
     <div class="item">
@@ -72,19 +75,34 @@
     <h2>Projetos</h2>
     <div class="grid">
       <div class="card">
-        <h3>Plataforma de IA para Geração de Podcasts</h3>
-        <p>Sistema que automatiza a criação de episódios de áudio a partir de PDFs usando RAG, LLMs e TTS.</p>
-        <span class="stack">Python, Gemini/OpenAI, ChromaDB, FastAPI</span>
+        <h3>Firmou</h3>
+        <p>Plataforma SaaS própria que gera contratos e propostas comerciais com IA, com assinatura digital e validade jurídica. Em produção com landing pages SEO, pagamentos integrados e geração de documentos via LLM em menos de 2 minutos.</p>
+        <span class="stack">Laravel, Nuxt.js, Gemini, Asaas, Redis, Docker</span>
+        <a href="https://firmou.app.br">firmou.app.br</a>
       </div>
       <div class="card">
-        <h3>Automação de Auditoria de Varejo</h3>
-        <p>Monitoramento de estoque e auditoria de gôndolas em tempo real com Visão Computacional.</p>
-        <span class="stack">Python, FastAPI, YOLO, OpenCV, Roboflow</span>
+        <h3>Confirmação de Gôndola por IA</h3>
+        <p>Microserviço de visão computacional que audita gôndolas comparando fotos com planogramas. Pipeline: YOLOv8 custom (95% mAP) detecta regiões → Gemini 2.5 Pro identifica produtos por EAN → cross-validation corrige confusões. 98% de precisão, ~43s por auditoria.</p>
+        <span class="stack">Python, FastAPI, YOLOv8, OpenCV, Gemini, PostgreSQL, Docker</span>
+        <a href="https://webjasper.com.br/sistema-planograma/">Web Jasper</a>
+      </div>
+      <div class="card">
+        <h3>KiroSonar <span class="badge">Hackathon</span></h3>
+        <p>CLI de Code Review inteligente com IA que analisa git diffs, aplica regras da empresa e faz auto-fix no código.</p>
+        <span class="stack">Python, LLMs, Git</span>
+        <a href="https://github.com/IA-para-DEVs-SD/grupo-5-kirosonar">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>AI Security Scanner <span class="badge">Hackathon</span></h3>
+        <p>CLI de auditoria de segurança com agentes de IA, RAG local e classificação de vulnerabilidades por severidade.</p>
+        <span class="stack">Python, FAISS, OpenAI, Pydantic, RAG</span>
+        <a href="https://github.com/IA-para-DEVs-SD/agentes-do-caos">GitHub</a>
       </div>
       <div class="card">
         <h3>Vacina SESI</h3>
-        <p>Plataforma nacional de gerenciamento de campanhas de vacinação corporativa em larga escala.</p>
+        <p>Plataforma nacional de gestão de vacinação corporativa para a indústria brasileira, com campanhas em larga escala, processamento assíncrono e alta disponibilidade.</p>
         <span class="stack">Laravel, Vue.js, PostgreSQL, Docker, RabbitMQ</span>
+        <a href="https://vacinasesi.com.br">Site</a>
       </div>
     </div>
   </section>
@@ -111,11 +129,21 @@
     </ul>
   </section>
 
+  <section id="publicacoes">
+    <h2>Publicações</h2>
+    <div class="item">
+      <h3><a href="https://medium.com/@weslleyaraujo/come%C3%A7ando-com-rabbitmq-laravel-e-node-um-guia-simples-e-pr%C3%A1tico-d34bed5ffe98" target="_blank">Dominando RabbitMQ com Exemplos em Laravel e Node.js</a></h3>
+      <span class="empresa">Medium</span>
+      <p>Guia prático e didático sobre RabbitMQ cobrindo os 4 tipos de exchange (Direct, Fanout, Topic, Headers) com exemplos funcionais usando Laravel como producer e Node.js como consumer.</p>
+    </div>
+  </section>
+
   <section id="formacao">
     <h2>Formação</h2>
     <div class="item">
       <h3>Análise e Desenvolvimento de Sistemas</h3>
       <span class="empresa">Uninter</span>
+      <span class="periodo">2019 – 2022</span>
     </div>
   </section>
 
@@ -124,7 +152,7 @@
     <ul>
       <li><a href="https://github.com/we2l">GitHub</a></li>
       <li><a href="mailto:weslleyadesousa@gmail.com">Email</a></li>
-      <li><a href="https://linkedin.com/in/">LinkedIn</a></li>
+      <li><a href="https://www.linkedin.com/in/weslley-leite/">LinkedIn</a></li>
     </ul>
   </section>
 </body>

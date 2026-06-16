@@ -49,6 +49,16 @@ section {
   padding-top: 8rem;
 }
 
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 40%;
+  border: 3px solid #3fb950;
+  margin-bottom: 1rem;
+}
+
 #hero h1 {
   font-size: 2.5rem;
   color: #f0f6fc;
@@ -58,6 +68,22 @@ section {
   color: #3fb950;
   font-size: 1.2rem;
   margin-top: 0.5rem;
+}
+
+.location {
+  color: #8b949e;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.badge {
+  background: #3fb950;
+  color: #0d1117;
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  vertical-align: middle;
+  font-weight: bold;
 }
 
 h2 {
